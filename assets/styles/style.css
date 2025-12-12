@@ -1,0 +1,40 @@
+/* ===== CARDS ===== */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== IMÁGENES ===== */
+.card-img-top {
+  height: 200px;       /* todas iguales */
+  object-fit: cover;  /* recorte sin deformar */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* ===== CONTENIDO ===== */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  margin-top: 3rem;
+}
