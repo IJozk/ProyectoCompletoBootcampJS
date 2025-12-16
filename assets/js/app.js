@@ -68,7 +68,8 @@ btnBuscar.addEventListener('click', (e) => {
             recetasFiltradas = filtrarRecetasPorIngrediente(terminoBusqueda);
         }
     }
-    mostrarRecetas(recetasFiltradas);
+    divisionRecetasPaginacion(recetasFiltradas);
+    mostrarRecetas(recetasPaginacion[paginaActual]);
 });
 
 function mostrarRecetas(recetas) {
@@ -110,7 +111,7 @@ const recetasPaginacion = [];
 
 let paginaActual = 0;
 
-const divisionRecetasPaginacion = () => {
+const divisionRecetasPaginacion = (recetas) => {
 
     const divPaginacion = document.getElementById('paginacion');
 
@@ -136,5 +137,5 @@ const cambiarPagina = (indicePagina) => {
     mostrarRecetas(recetasPaginacion[indicePagina]);
 };
 
-divisionRecetasPaginacion();
+divisionRecetasPaginacion(recetas);
 mostrarRecetas(recetasPaginacion[paginaActual]);
